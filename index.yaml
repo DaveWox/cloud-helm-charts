@@ -647,6 +647,18 @@ entries:
     urls:
     - https://github.com/stfc/cloud-helm-charts/releases/download/stfc-cloud-docker-registry-1.0.1/stfc-cloud-docker-registry-1.0.1.tgz
     version: 1.0.1
+  stfc-cloud-fission:
+  - apiVersion: v2
+    created: "2026-02-10T15:11:02.055427283Z"
+    dependencies:
+    - name: fission-all
+      repository: https://fission.github.io/fission-charts
+      version: 1.22.0
+    digest: cc44253bbde62da105e010f3ba81c9739d797db02baab0a3bb72759f61c92030
+    name: stfc-cloud-fission
+    urls:
+    - https://github.com/DaveWox/cloud-helm-charts/releases/download/stfc-cloud-fission-1.0.0/stfc-cloud-fission-1.0.0.tgz
+    version: 1.0.0
   stfc-cloud-harbor:
   - apiVersion: v2
     created: "2026-02-03T13:01:44.139000475Z"
@@ -1889,4 +1901,4 @@ entries:
     urls:
     - https://github.com/stfc/cloud-helm-charts/releases/download/stfc-cloud-vm-1.0.0/stfc-cloud-vm-1.0.0.tgz
     version: 1.0.0
-generated: "2026-02-03T13:03:14.313368902Z"
+generated: "2026-02-10T15:11:02.055744796Z"
