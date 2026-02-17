@@ -3,7 +3,7 @@ openTelemetry:
   ## The variable is endpoint of the collector in the format shown below.
   ## otlpCollectorEndpoint: "otel-collector.observability.svc:4317"
   ##
-  otlpCollectorEndpoint: "otel-collector.opentelemetry-operator-system.svc:4317"
+  otlpCollectorEndpoint: ""
   ## Set this flag to false if you are using secure endpoint for the collector.
   ##
   otlpInsecure: true
@@ -41,11 +41,3 @@ openTelemetry:
   ##
   propagators: "tracecontext,baggage"# empty values to deploy defaults for now
 
-## Enable Grafana Dashboard configmaps for auto dashboard provisioning
-## If you use kube-prometheus stack for monitoring, these will get imported into grafana
-grafana:
-  ## The namespace in which grafana pod is present
-  namespace: monitoring
-  dashboards:
-    ## Disabled by default. switch to true to deploy them
-    enable: true
