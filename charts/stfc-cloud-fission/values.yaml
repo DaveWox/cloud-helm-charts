@@ -41,3 +41,37 @@ openTelemetry:
   ##
   propagators: "tracecontext,baggage"# empty values to deploy defaults for now
 
+serviceMonitor:
+  enabled: false
+  ##namespace in which you want to deploy servicemonitor
+  ##
+  namespace: ""
+  ## Map of additional labels to add to the ServiceMonitor resources
+  #  to allow selecting specific ServiceMonitors
+  #  in case of multiple prometheus deployments
+  additionalServiceMonitorLabels: {}
+  #  release: "monitoring"
+  #  key: "value"
+
+# The following components expose Prometheus metrics and have podmonitors in this chart (disabled by default)
+#
+podMonitor:
+  enabled: false
+  ##namespace in which you want to deploy podmonitor
+  ##
+  namespace: ""
+  ## Map of additional labels to add to the PodMonitor resources
+  #  to allow selecting specific PodMonitor
+  #  in case of multiple prometheus deployments
+  additionalPodMonitorLabels: {}
+  #  release: "monitoring"
+  #  key: "value"
+
+## Enable Grafana Dashboard configmaps for auto dashboard provisioning
+## If you use kube-prometheus stack for monitoring, these will get imported into grafana
+grafana:
+  ## The namespace in which grafana pod is present
+  namespace: monitoring
+  dashboards:
+    ## Disabled by default. switch to true to deploy them
+    enable: false
