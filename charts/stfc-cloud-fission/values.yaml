@@ -1,4 +1,6 @@
 fission-all:
+  routerServiceType: LoadBalancer
+  
   openTelemetry:
     ## Use this flag to set the collector endpoint for OpenTelemetry.
     ## The variable is endpoint of the collector in the format shown below.
