@@ -2,6 +2,6 @@ apiVersion: v2
 dependencies:
   - name: fission-all
     repository: https://fission.github.io/fission-charts
-    version: 1.22.0
+    version: 1.22.1
 name: stfc-cloud-fission
-version: 1.0.0
+version: 1.0.1
